@@ -386,6 +386,28 @@
                                     </div>
 
 
+                                     <div class="section">
+                                        <label for="input002"><h6 class="mb20 mt40">Employee Email </h6></label>
+                                        <label for="input002" class="field prepend-icon">
+                                            @if(\Route::getFacadeRoot()->current()->uri() == 'edit-emp/{id}')
+                                                <input type="text" name="emp_email" id="emp_email" class="gui-input"
+                                                       value="@if($emps && $emps->employee->email){{$emps->employee->email}}@endif" required>
+                                                <label for="input002" class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                </label>
+                                            @else
+                                                <input type="email" name="emp_email" id="emp_email" class="gui-input"
+                                                       placeholder="employee Email..." required>
+                                                <label for="input002" class="field-icon">
+                                                    <i class="fa fa-user"></i>
+                                                    
+                                                </label>
+                                            @endif
+                                        </label>
+                                    </div>
+
+
+
                                     <div class="section">
                                         <label for="input002"><h6 class="mb20 mt40">Employment Status </h6></label>
                                         <div class="option-group field">

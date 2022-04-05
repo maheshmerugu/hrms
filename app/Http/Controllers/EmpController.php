@@ -45,7 +45,7 @@ class EmpController extends Controller
 
         $user           = new User;
         $user->name     = $request->emp_name;
-        $user->email    = str_replace(' ', '_', $request->emp_name) . '@sipi-ip.sg';
+        $user->email    = $request->emp_email;
         $user->password = bcrypt('123456');
         $user->save();
 
